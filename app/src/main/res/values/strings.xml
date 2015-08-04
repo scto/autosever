@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">Autosever</string>
+    <string name="status_enabled">WiFi will automatically be disabled once your device becomes disconnected. This will save battery by avoiding active scanning.</string>
+    <string name="status_disabled">WiFi will behave as usual.</string>
+    <string name="status_off">WiFi is off. Tap to enable.</string>
+    <string name="enabling_wifi">Enabling WiFi…</string>
+    <string name="disabling_wifi">Disabling WiFi…</string>
+
+</resources>

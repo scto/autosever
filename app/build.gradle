@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0 rc3"
+
+    signingConfigs {
+        production {
+            keyAlias 'afollestad'
+            keyPassword 'aidan1995'
+            storeFile file('../keystore.jks')
+            storePassword 'aidan1995'
+        }
+    }
+    defaultConfig {
+        applicationId "com.afollestad.autosever"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.production
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.production
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.afollestad:material-dialogs:0.7.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+}

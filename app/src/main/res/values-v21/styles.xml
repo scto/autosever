@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Parent">
+        <item name="android:navigationBarColor">?colorPrimary</item>
+        <item name="android:colorControlHighlight">?colorAccent</item>
+    </style>
+
+</resources>

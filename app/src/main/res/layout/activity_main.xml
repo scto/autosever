@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress AndroidDomInspection -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="@drawable/accent_selector"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/regular_margin"
+        tools:ignore="UselessParent"
+        android:layout_marginBottom="@dimen/status_image_offset">
+
+        <ImageView
+            android:id="@+id/statusImage"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_enabled"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statusImage"
+            android:layout_marginTop="@dimen/regular_margin"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.4"
+            android:text="@string/status_enabled"
+            android:textStyle="@integer/font_textStyle_medium" />
+
+    </RelativeLayout>
+
+</FrameLayout>
